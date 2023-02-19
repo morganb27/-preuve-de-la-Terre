@@ -1,29 +1,13 @@
-while True:
-    print("Veuillez entrer un nombre et sa puissance :", end = " ")
-    ch=input()
+import sys
 
-    ch = ch.split(" ")
+def puissance_nombre():
+    a = int(sys.argv[1])
+    b = int(sys.argv[2])
+    p = 1
+    for i in range(b):
+        p = p * a
+    print(p)
 
-    try:
-        if len(ch) >= 3:
-            print("Tu ne me la mettras pas à l'envers ! ;)")
-            break
-        else:
-            a = ch[0]
-            b = ch[1]
-
-            a = int(a)
-            b = int(b)
-
-            if b < 0:
-                print("Erreur.")
-                break
-            else:
-                print(a ** b)
-                break
-
-    except:
-        print("Tu ne me la mettras pas à l'envers ! ;)")
-        break
+puissance_nombre()
 
 
