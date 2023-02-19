@@ -1,8 +1,8 @@
-print("Veuillez entrer vos arguments :", end = " ")
-ch = input()
-#type(ch) = 'str'
+import sys
 
-ch = ch.split(" ") #split ch into a list of words
+def affiche_arguments():
+    for i in range(1, len(sys.argv)):
+        print(sys.argv[i])
 
-for argument in ch:
-    print(argument)
+affiche_arguments()
+
